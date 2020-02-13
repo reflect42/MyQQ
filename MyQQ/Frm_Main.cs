@@ -127,10 +127,26 @@ namespace MyQQ
             
         }
 
-        Frm_Chat frmChat = new Frm_Chat();
+        Frm_Chat frmChat;
         private void lvFriend_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            
+            if (lvFriend.SelectedItems.Count>0)//判断是否有选中项
+            {
+                if (frmChat == null) //判断聊天窗体对象是否为空
+                {
+                    frmChat = new Frm_Chat();//创建聊天窗体对象
+                    frmChat.friendID = Convert.ToInt32(lvFriend.SelectedItems[0].Name);//记录聊天的账号
+                    frmChat.nickName = dataOper.GetDataSet("select NickName from tb_User where ID=" + frmChat.friendID).Tables[0].Rows[0][0].ToString();//记录昵称
+                    frmChat.headID = Convert.ToInt32(dataOper.GetDataSet("select HeadID from tb_User where ID=" + frmChat.friendID).Tables[0].Rows[0][0]) + 1;//记录头像
+                    frmChat.ShowDialog(); //以对话框显示聊天窗体对象
+                    frmChat = null;//将聊天窗体对象设置为空
+                }
+                if(tmChat.Enabled == true)//如果聊天定时器处于可用状态
+                {
+                    tmChat.Stop();//停止聊天定时器
+                    lvFriend.SelectedItems[0].ImageIndex = freindHeadID;//将选中项得头像显示为正常状态
+                }
+            }
         }
     }
 }
