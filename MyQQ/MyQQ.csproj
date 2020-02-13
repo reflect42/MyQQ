@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6B73A0E-45E2-46B6-9AC9-45B9F3AE3266}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyQQ</RootNamespace>
+    <AssemblyName>MyQQ</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataOperator.cs" />
+    <Compile Include="Frm_AddFriend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_AddFriend.Designer.cs">
+      <DependentUpon>Frm_AddFriend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Chat.Designer.cs">
+      <DependentUpon>Frm_Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_EditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_EditInfo.Designer.cs">
+      <DependentUpon>Frm_EditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Register.Designer.cs">
+      <DependentUpon>Frm_Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Remind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Remind.Designer.cs">
+      <DependentUpon>Frm_Remind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicClass.cs" />
+    <EmbeddedResource Include="Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Register.resx">
+      <DependentUpon>Frm_Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="head\1-1.bmp" />
+    <Content Include="head\1.bmp" />
+    <Content Include="head\10-1.bmp" />
+    <Content Include="head\10.bmp" />
+    <Content Include="head\100-1.bmp" />
+    <Content Include="head\100.bmp" />
+    <Content Include="head\11-1.bmp" />
+    <Content Include="head\11.bmp" />
+    <Content Include="head\12-1.bmp" />
+    <Content Include="head\12.bmp" />
+    <Content Include="head\13-1.bmp" />
+    <Content Include="head\13.bmp" />
+    <Content Include="head\14-1.bmp" />
+    <Content Include="head\14.bmp" />
+    <Content Include="head\15-1.bmp" />
+    <Content Include="head\15.bmp" />
+    <Content Include="head\16-1.bmp" />
+    <Content Include="head\16.bmp" />
+    <Content Include="head\17-1.bmp" />
+    <Content Include="head\17.bmp" />
+    <Content Include="head\18-1.bmp" />
+    <Content Include="head\18.bmp" />
+    <Content Include="head\19-1.bmp" />
+    <Content Include="head\19.bmp" />
+    <Content Include="head\2-1.bmp" />
+    <Content Include="head\2.bmp" />
+    <Content Include="head\20-1.bmp" />
+    <Content Include="head\20.bmp" />
+    <Content Include="head\21-1.bmp" />
+    <Content Include="head\21.bmp" />
+    <Content Include="head\22-1.bmp" />
+    <Content Include="head\22.bmp" />
+    <Content Include="head\23-1.bmp" />
+    <Content Include="head\23.bmp" />
+    <Content Include="head\24-1.bmp" />
+    <Content Include="head\24.bmp" />
+    <Content Include="head\25-1.bmp" />
+    <Content Include="head\25.bmp" />
+    <Content Include="head\26-1.bmp" />
+    <Content Include="head\26.bmp" />
+    <Content Include="head\27-1.bmp" />
+    <Content Include="head\27.bmp" />
+    <Content Include="head\28-1.bmp" />
+    <Content Include="head\28.bmp" />
+    <Content Include="head\29-1.bmp" />
+    <Content Include="head\29.bmp" />
+    <Content Include="head\3-1.bmp" />
+    <Content Include="head\3.bmp" />
+    <Content Include="head\30-1.bmp" />
+    <Content Include="head\30.bmp" />
+    <Content Include="head\31-1.bmp" />
+    <Content Include="head\31.bmp" />
+    <Content Include="head\32-1.bmp" />
+    <Content Include="head\32.bmp" />
+    <Content Include="head\33-1.bmp" />
+    <Content Include="head\33.bmp" />
+    <Content Include="head\34-1.bmp" />
+    <Content Include="head\34.bmp" />
+    <Content Include="head\35-1.bmp" />
+    <Content Include="head\35.bmp" />
+    <Content Include="head\36-1.bmp" />
+    <Content Include="head\36.bmp" />
+    <Content Include="head\37-1.bmp" />
+    <Content Include="head\37.bmp" />
+    <Content Include="head\38-1.bmp" />
+    <Content Include="head\38.bmp" />
+    <Content Include="head\39-1.bmp" />
+    <Content Include="head\39.bmp" />
+    <Content Include="head\4-1.bmp" />
+    <Content Include="head\4.bmp" />
+    <Content Include="head\40-1.bmp" />
+    <Content Include="head\40.bmp" />
+    <Content Include="head\41-1.bmp" />
+    <Content Include="head\41.bmp" />
+    <Content Include="head\42-1.bmp" />
+    <Content Include="head\42.bmp" />
+    <Content Include="head\43-1.bmp" />
+    <Content Include="head\43.bmp" />
+    <Content Include="head\44-1.bmp" />
+    <Content Include="head\44.bmp" />
+    <Content Include="head\45-1.bmp" />
+    <Content Include="head\45.bmp" />
+    <Content Include="head\46-1.bmp" />
+    <Content Include="head\46.bmp" />
+    <Content Include="head\47-1.bmp" />
+    <Content Include="head\47.bmp" />
+    <Content Include="head\48-1.bmp" />
+    <Content Include="head\48.bmp" />
+    <Content Include="head\49-1.bmp" />
+    <Content Include="head\49.bmp" />
+    <Content Include="head\5-1.bmp" />
+    <Content Include="head\5.bmp" />
+    <Content Include="head\50-1.bmp" />
+    <Content Include="head\50.bmp" />
+    <Content Include="head\51-1.bmp" />
+    <Content Include="head\51.bmp" />
+    <Content Include="head\52-1.bmp" />
+    <Content Include="head\52.bmp" />
+    <Content Include="head\53-1.bmp" />
+    <Content Include="head\53.bmp" />
+    <Content Include="head\54-1.bmp" />
+    <Content Include="head\54.bmp" />
+    <Content Include="head\55-1.bmp" />
+    <Content Include="head\55.bmp" />
+    <Content Include="head\56-1.bmp" />
+    <Content Include="head\56.bmp" />
+    <Content Include="head\57-1.bmp" />
+    <Content Include="head\57.bmp" />
+    <Content Include="head\58-1.bmp" />
+    <Content Include="head\58.bmp" />
+    <Content Include="head\59-1.bmp" />
+    <Content Include="head\59.bmp" />
+    <Content Include="head\6-1.bmp" />
+    <Content Include="head\6.bmp" />
+    <Content Include="head\60-1.bmp" />
+    <Content Include="head\60.bmp" />
+    <Content Include="head\61-1.bmp" />
+    <Content Include="head\61.bmp" />
+    <Content Include="head\62-1.bmp" />
+    <Content Include="head\62.bmp" />
+    <Content Include="head\63-1.bmp" />
+    <Content Include="head\63.bmp" />
+    <Content Include="head\64-1.bmp" />
+    <Content Include="head\64.bmp" />
+    <Content Include="head\65-1.bmp" />
+    <Content Include="head\65.bmp" />
+    <Content Include="head\66-1.bmp" />
+    <Content Include="head\66.bmp" />
+    <Content Include="head\67-1.bmp" />
+    <Content Include="head\67.bmp" />
+    <Content Include="head\68-1.bmp" />
+    <Content Include="head\68.bmp" />
+    <Content Include="head\69-1.bmp" />
+    <Content Include="head\69.bmp" />
+    <Content Include="head\7-1.bmp" />
+    <Content Include="head\7.bmp" />
+    <Content Include="head\70-1.bmp" />
+    <Content Include="head\70.bmp" />
+    <Content Include="head\71-1.bmp" />
+    <Content Include="head\71.bmp" />
+    <Content Include="head\72-1.bmp" />
+    <Content Include="head\72.bmp" />
+    <Content Include="head\73-1.bmp" />
+    <Content Include="head\73.bmp" />
+    <Content Include="head\74-1.bmp" />
+    <Content Include="head\74.bmp" />
+    <Content Include="head\75-1.bmp" />
+    <Content Include="head\75.bmp" />
+    <Content Include="head\76-1.bmp" />
+    <Content Include="head\76.bmp" />
+    <Content Include="head\77-1.bmp" />
+    <Content Include="head\77.bmp" />
+    <Content Include="head\78-1.bmp" />
+    <Content Include="head\78.bmp" />
+    <Content Include="head\79-1.bmp" />
+    <Content Include="head\79.bmp" />
+    <Content Include="head\8-1.bmp" />
+    <Content Include="head\8.bmp" />
+    <Content Include="head\80-1.bmp" />
+    <Content Include="head\80.bmp" />
+    <Content Include="head\81-1.bmp" />
+    <Content Include="head\81.bmp" />
+    <Content Include="head\82-1.bmp" />
+    <Content Include="head\82.bmp" />
+    <Content Include="head\83-1.bmp" />
+    <Content Include="head\83.bmp" />
+    <Content Include="head\84-1.bmp" />
+    <Content Include="head\84.bmp" />
+    <Content Include="head\85-1.bmp" />
+    <Content Include="head\85.bmp" />
+    <Content Include="head\86-1.bmp" />
+    <Content Include="head\86.bmp" />
+    <Content Include="head\87-1.bmp" />
+    <Content Include="head\87.bmp" />
+    <Content Include="head\88-1.bmp" />
+    <Content Include="head\88.bmp" />
+    <Content Include="head\89-1.bmp" />
+    <Content Include="head\89.bmp" />
+    <Content Include="head\9-1.bmp" />
+    <Content Include="head\9.bmp" />
+    <Content Include="head\90-1.bmp" />
+    <Content Include="head\90.bmp" />
+    <Content Include="head\91-1.bmp" />
+    <Content Include="head\91.bmp" />
+    <Content Include="head\92-1.bmp" />
+    <Content Include="head\92.bmp" />
+    <Content Include="head\93-1.bmp" />
+    <Content Include="head\93.bmp" />
+    <Content Include="head\94-1.bmp" />
+    <Content Include="head\94.bmp" />
+    <Content Include="head\95-1.bmp" />
+    <Content Include="head\95.bmp" />
+    <Content Include="head\96-1.bmp" />
+    <Content Include="head\96.bmp" />
+    <Content Include="head\97-1.bmp" />
+    <Content Include="head\97.bmp" />
+    <Content Include="head\98-1.bmp" />
+    <Content Include="head\98.bmp" />
+    <Content Include="head\99-1.bmp" />
+    <Content Include="head\99.bmp" />
+    <Content Include="head\back.bmp" />
+    <Content Include="QQ截图20200212214511.png" />
+    <Content Include="Resources\back.bmp" />
+    <Content Include="Resources\chat.PNG" />
+    <Content Include="Resources\info.ico" />
+    <Content Include="Resources\info.png" />
+    <Content Include="Resources\login.PNG" />
+    <Content Include="Resources\Logo.jpg" />
+    <Content Include="Resources\Message.gif" />
+    <Content Include="Resources\QQ.ico" />
+    <Content Include="Resources\refresh.ico" />
+    <Content Include="Resources\Remind.png" />
+    <Content Include="Resources\search.png" />
+    <Content Include="Resources\searchback.jpg" />
+    <Content Include="Resources\set.png" />
+    <Content Include="Resources\title.ico" />
+    <Content Include="Resources\title.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
